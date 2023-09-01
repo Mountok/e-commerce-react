@@ -1,0 +1,216 @@
+*{
+    margin: 0;
+    padding: 0;     
+
+}
+
+body{
+    background:white;
+    color: #222;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 300;
+}
+.wrapper{
+    width: 1280px;
+    margin: 20px auto;
+}
+header{
+    position: relative;
+}
+header .shop-cart-button{
+    float: right;
+    cursor: pointer;
+    transition: color,transform .5s ease;
+    font-size: 20px;
+}
+header .shop-cart-button:hover,
+header .shop-cart-button.active{
+    color: #dc3d3d;
+    transform: scale(1.1);
+}
+header .shop-cart{
+    z-index: 1000;
+    position: absolute;
+    top: 30px;
+    right: 0;
+    width: 350px;
+    background-color: #e2e2e2;
+    box-shadow: 4px 5px 15px -7px #606060;
+    padding: 20px;
+    padding-bottom: 0px;
+}
+header .shop-cart .item{
+    width: 100%;
+    float: left;
+    margin-bottom: 20px;
+}
+
+header .shop-cart .item .delete-item{
+    color: #ca5252;
+    float: right;
+    position: relative;
+    top: -30px;
+    cursor: pointer;
+    transition: color,transform .5s ease;
+}
+header .shop-cart .summ{
+    float: right;
+    font-weight: 500;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+}
+header .shop-cart .item .delete-item:hover{
+    color: #dd1717;
+    transform: scale(1.1);
+}
+header .shop-cart .item img{
+    width: 70px;
+    height: 70px;
+    float: left;
+    margin-right: 20px;
+}
+header .shop-cart .item h2{
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+header .shop-cart .item p{
+    color: #797979;
+    font-weight: 600;
+}
+header .shop-cart .empty h2{
+    font-size: 15px;
+    margin-bottom: 20px;
+    font-weight: 300;
+    letter-spacing: 3px;
+}
+header .logo{
+    font-weight: 600;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+header ul.nav {
+    list-style: none;
+    float: right;
+}
+header ul.nav li{
+    display: inline;
+    margin-left: 25px;
+    cursor: pointer;
+    transition: opacity .5s ease;
+}
+header ul.nav li:hover{
+    opacity: .5;
+}
+header .presentation{
+    position: relative;
+    margin: 20px 0px;
+    background: url('./img/living-room.jpg') no-repeat;
+    width: 100%;
+    height: 350px;
+    background-size: cover;
+    background-position: center -320px;
+    background-blend-mode: multiply;
+    background-color: #a7a7a7bc;
+}
+header .presentation::after{
+    position: absolute;
+    content: 'Лучшие товары для вашего дома';
+    top: 40px;
+    left: 50px;
+    font-size: 40px;
+    font-weight: 600;
+    color:#fff;
+    width: 350px;
+}
+header .presentation::before{
+    position: absolute;
+    content: 'по низким ценам';
+    top: 180px;
+    left: 50px;
+    font-size: 20px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    color:#ffffff;
+    width: 350px;
+}
+
+
+
+
+footer{
+    text-align: center;
+    margin-top: 50px;
+}
+
+.categories div{
+    display: inline-block;
+    background-color: #f2f2f2;
+    border-radius: 50px;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    margin-right: 15px;
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition:  all .5s ease;;
+}
+.categories div:hover{
+    border-color: silver;
+    transform: scale(1.05);
+}
+
+
+main{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+main .item{
+    width: 30%;
+    height:500px;
+    margin-bottom: 50px;
+    background: #ececec;
+    overflow: hidden;
+    border-radius: 10px 10px 0 0;
+    position: relative;
+    padding-bottom: 10px;
+
+}
+
+main .item img{
+    transition: transform .5s ease;
+    width: 100%;
+    height: 60%;
+    border-radius: 10px 10px 0 0;
+}
+main .item img:hover{
+    transform: scale(1.07);
+}
+
+main h2,
+main p,
+main b{
+    margin: 10px 20px;
+    color: #333;
+} 
+main b{color: #5fa365;}
+
+main .add-to-cart{
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    background: #ca5252;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    line-height: 35px;
+    font-weight: 600;
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+    transition: transform .5s ease;
+}
+main .add-to-cart:hover{
+    transform: translateY(-5px)   scale(1.1) ;
+}
